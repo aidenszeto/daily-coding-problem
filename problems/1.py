@@ -11,10 +11,11 @@ Bonus: Can you do this in one pass?
 nums = [2,3,1,5,2,7,20,9,4,3]
 k = 7
 
-complements = {}
-for num in nums:
-    if ((k - num) in complements):
-        print(f"Two sum: {num}, {k - num}")
-        exit()
-    complements[num] = k - num
-print("No two sum found")
+def two_sum(nums, k):
+    complements = {}
+    for num in nums:
+        if ((k - num) in complements):
+            print(f"Two sum: {num}, {k - num}")
+            exit()
+        complements[num] = k - num
+    print("No two sum found")
